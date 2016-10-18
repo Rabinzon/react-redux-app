@@ -8,7 +8,9 @@
     "start": "webpack-dev-server --progress --colors",
     "lint": "eslint -c .eslintrc ./src"
   },
-  "pre-push": ["lint"],
+  "prepush": [
+    "npm run lint"
+  ],
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/Rabinzon/rrtrello.git"
@@ -39,6 +41,7 @@
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.4.1",
     "pre-push": "^0.1.1",
+    "prepush": "^3.1.11",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.2"
   },
